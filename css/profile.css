@@ -1,0 +1,57 @@
+.profilearea{
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 20px;
+    width: 100%;
+}
+.profilename{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profileid{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.writersummary{
+    margin-top: 10px;
+    padding-top: 10px;
+    background-color: rgb(229, 233, 236);
+    border-radius: 10px;
+    padding-bottom: 10px;
+
+}
+.writersummaryheading{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.summaryheading{
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 30px;
+    margin-left: 0;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.userlist{
+    margin: 0;
+    padding: 0;
+}
+.userlist li {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+.userli .writetvalue{
+padding-left: 10px;
+padding-right: 10px;
+border-radius: 5px;
+}

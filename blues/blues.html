@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Blues</title>
+    <style>
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("th (2).jfif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.nav-bar {
+    width:  100vw;
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    font-size: 40px;
+}
+.chelsea{
+    height: 70px;
+    width: 70px;
+}
+@keyframes rotate {
+    from{
+        width: 0;
+
+    }
+    to{
+        transform: rotate(360deg);
+        width: 400%;
+    }
+    
+}
+.image1{
+    width: 250px;
+    height: 250px;
+    transition: 5s;
+}
+.image1:hover{
+    transform: translateX(400%);
+}
+
+.imageslide{
+    display: flex;
+    width: 100vw;
+    
+    height: 170px;
+    
+}
+.imageslide img{
+    width: 200px;
+    height: 150px;
+    transition: all .5s ease-in-out
+}
+.imageslide img:hover{
+    width: 250px;
+    height: 200px;
+    transform: translate(100px, -40px);
+    transform: rotate(360deg);
+}
+.space{
+    height: 500px;
+}
+    </style>
+</head>
+<body  >
+    <div class="nav-bar">
+        <div><img class="chelsea" src="th (3).jfif" alt=""></div>
+        <div><label class="logo">  Chelsea </label></div>
+        <div class="offlinee"> The Blues </div>
+    </div>
+    <div>
+         <img class="image1" src="th (4).jfif" alt="">
+         <p>
+            
+         </p>
+    </div>
+    <h2 style="color: lime;" >Who is Chelsea's ultimate cult hero?</h2>
+    <img style=" height: 300px; width: 400px; " src="th (1).jfif" alt="">
+    <p style="color: rgb(89, 0, 255);">Branislav Ivanovic won a Champions League <br> and three Premier League titles
+         during his decade at Stamford Bridge. <br>
+
+        He was famous for roaring up and down the pitch <br> from right-back and wreaking havoc 
+        in opposition penalty areas <br> while scoring 34 goals across 377 appearances.
+        
+        </p>
+        <h2 style="color: lime;" >Photo slide</h2>
+        <div class="imageslide" >
+            <img src="th.jfif" alt="">
+            <img src="th (1).jfif" alt="">
+            <img src="th (2).jfif" alt="">
+            <img src="th (3).jfif" alt="">
+            <img src="th (4).jfif" alt="">
+        </div>
+ <div class="space">
+
+ </div>
+</body>
+</html>

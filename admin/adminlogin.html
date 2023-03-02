@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>perfectwriters-->login </title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/styles3.css">
+    <link rel="stylesheet" href="../../css/popup.css">
+    <link rel="stylesheet" href="../../css/inside_styles.css">
+    <link rel="stylesheet" href="../../css/fonts.css">
+    <link rel="stylesheet" href="../../css/fontlink.css">
+    <link rel="stylesheet" href="../bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <script src="../bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-growl/1.0.0/jquery.bootstrap-growl.min.js" integrity="sha512-pBoUgBw+mK85IYWlMTSeBQ0Djx3u23anXFNQfBiIm2D8MbVT9lr+IxUccP8AMMQ6LCvgnlhUCK3ZCThaBCr8Ng==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+   
+</head>
+<body>
+        <!--alert-->
+        <div id="alert" ></div>
+        <!--/alert-->
+
+    <!--header-->
+<div class="nav-bar">
+    <div class="perfectwriters" ><img class="logo" src="../logo.jpg" alt=""> <label class="logo"> PerfectWriters</label> </div>
+    <div class="offlinee"> not logged in </div>
+</div>
+<!--/header-->
+<!--login area-->
+<div class="login-area" id="login-area">
+    <div class="center">
+        <h1>Admin Login</h1>
+        <form name="form" method="post" >
+            <div class="text-field">
+                <input type="text" id="email" required>
+                <span></span>
+                <label >Email or Phone number</label>
+            </div>
+            <div class="text-field">
+                <input type="password" id="password" required>
+                <span></span>
+                <label >Password</label>
+            </div>
+            <div class="pass">
+                <a href="#" class="pass-a">Forgot Password? </a>
+            </div>
+            <div class="pass">
+              <a href="../user/login.html" class="pass-a"><i class="fa fa-external-link" aria-hidden="true"></i> Visit User Webpage </a>
+          </div>
+            <input type="submit" class="input"  id="login" value="Login" >
+        </form>
+
+    </div>
+</div>
+<!--/login area-->
+<!--footer-->
+<div class="footer">
+    <p>
+        &copy;  2023  PerfectWriters  developed by James Mutisya
+    </p>
+</div>
+<!--/footer-->
+
+
+  
+</script>
+<script >
+ 
+
+
+
+    //
+    //const password = document.getElementById("password");
+const login = document.getElementById("login");
+login.addEventListener("click", (e)=>{
+e.preventDefault();
+var email = document.forms['form']['email'];
+var password = document.forms['form']['password'];
+
+if(email.value.length < 5 ){
+  $.bootstrapGrowl("Login Failed", // Messages
+{ // options
+type: "danger", // info, success, warning and danger
+ele: "body", // parent container
+offset: {
+from: "top",
+amount: 20
+},
+align: "right", // right, left or center
+width: 250,
+delay: 1000,
+allow_dismiss: true, // add a close button to the message
+stackup_spacing: 10
+});
+  
+
+} else {
+    if(password.value.length < 5){
+      $.bootstrapGrowl("Login Failed", // Messages
+{ // options
+type: "danger", // info, success, warning and danger
+ele: "body", // parent container
+offset: {
+from: "top",
+amount: 20
+},
+align: "right", // right, left or center
+width: 250,
+delay: 1000,
+allow_dismiss: true, // add a close button to the message
+stackup_spacing: 10
+});
+
+    } else {
+
+      $.bootstrapGrowl("Login Success", // Messages
+{ // options
+type: "success", // info, success, warning and danger
+ele: "body", // parent container
+offset: {
+from: "top",
+amount: 20
+},
+align: "right", // right, left or center
+width: 250,
+delay: 1000,
+allow_dismiss: true, // add a close button to the message
+stackup_spacing: 10
+});
+
+window.location.href = "adminhomepage.html"; 
+
+
+    }
+}
+
+
+})
+</script>
+
+</body>
+</html>

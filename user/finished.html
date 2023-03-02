@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>perfectwriters-->finished</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/styles3.css">
+    <link rel="stylesheet" href="../css/popup.css">
+    <link rel="stylesheet" href="../css/homepage.css">
+    <link rel="stylesheet" href="../css/inside_styles.css">
+    <link rel="stylesheet" href="../css/fonts.css">
+    <link rel="stylesheet" href="../css/fontlink.css">
+    <link rel="stylesheet" href="../bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="../bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-growl/1.0.0/jquery.bootstrap-growl.min.js" integrity="sha512-pBoUgBw+mK85IYWlMTSeBQ0Djx3u23anXFNQfBiIm2D8MbVT9lr+IxUccP8AMMQ6LCvgnlhUCK3ZCThaBCr8Ng==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+<body>
+<!--header-->
+<div class="nav-bar">
+  <div class="perfectwriters" ><img class="logo" src="../logo.jpg" alt=""> <label class="logo"> PerfectWriters</label> </div>
+    <div class="balance"> 
+        Bal: <div class="actual_balance"> 00.00</div>
+    </div>
+    <div class="online"> logged in </div>
+    <div class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">James Mutisya
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="help.html">Help</a></li>
+            <li><a href="#" id="Passsword" > <button id="passwordbutton" data-toggle="modal" data-target="#changepassword" style="display: none;" ></button> Password</a></li>
+
+            <li><a href="login.html">Logout</a></li>
+          </ul>
+    </div>
+  
+    </div>
+  </div>
+  <!--/header-->
+<div class="whole-area">
+     <!--fixed left area-->
+   <div class="fixedleftarea">
+    <div class="writers-details">
+        <div >Welcome</div>
+        <div >James Mutisya</div>
+        <div>
+          <i class="icon-user font-size-sm"></i>Writer #ID   
+        </div>
+    </div>
+    <ul class="navigation " >
+        <li class="navigation-item"><a href="homepage.html" style="display: block;" class="navigation-link" ><i class="icon-cash3"></i> <span>Writer Overview</span></a></li>
+
+        <li class="navigation-item"><a href="available_orders.html" class="navigation-link" >Available Orders&nbsp;&nbsp; <span style="background-color: purple;" class="navigation-number" id="available"> 4</span></a></li>
+
+        <li class="navigation-item"><a href="bids.html" class="navigation-link" >Bids&nbsp; &nbsp;<span class="navigation-number" style="background-color: rgb(11, 230, 11);" id="bids"> 0</span></a></li>
+        
+        <li class="navigation-item"><a href="onhold.html" class="navigation-link"> On Hold Orders&nbsp; &nbsp;<span class="navigation-number" style="background-color: rgb(235, 11, 22);" id="onhold"> 0</span></a></li>
+
+        <li class="navigation-item"><a href="inprogress.html"class="navigation-link" >Orders in Progress&nbsp; &nbsp;<span class="navigation-number" style="background-color: rgb(233, 229, 7);" id="progress"> 0</span></a></li>
+
+        <li class="navigation-item"><a href="delivered.html" class="navigation-link" >Delivered Orders&nbsp; &nbsp;<span class="navigation-number" style="background-color: rgb(226, 103, 21);" id="delivered"> 0</span></a></li>
+
+        <li class="navigation-item"><a href="revision.html"class="navigation-link" >Revision Orders&nbsp; &nbsp;<span class="navigation-number" style="background-color: rgb(105, 11, 228);" id="revision"> 0</span></a></li>
+
+        <li class="navigation-item"><a href="approved.html"class="navigation-link" >Approved Orders&nbsp; &nbsp;<span class="navigation-number" style="background-color: rgb(23, 172, 9);" id="approved"> 0</span></a></li>
+
+        <li class="navigation-item active"><a href="finished.html"class="navigation-link" >Finished Orders&nbsp; &nbsp;<span class="navigation-number" style="background-color: rgb(172, 114, 7);" id="finished"> 0</span></a></li>
+
+        <li class="navigation-item"><a href="cancelled.html"class="navigation-link" >Cancelled Orders&nbsp; &nbsp;<span class="navigation-number" style="background-color: rgb(180, 24, 13);" id="cancelled"> 0</span></a></li>
+
+        <li class="navigation-item"><a href="profile.html" style="display: block;" class="navigation-link"><i class="icon-user"></i> <span>Profile</span></a></li>
+
+        <li class="navigation-item"><a href="help.html" style="display: block;" class="navigation-link"><i class="icon-newspaper"></i> <span>Help</span></a></li>
+
+        <li class="navigation-item"><a href="leave.html" style="display: block;" class="navigation-link"><i class="icon-price-tags"></i> <span>Apply Leave</span></a></li> 
+    </ul>
+</div>
+<!--/fixed left area-->
+   <!--scrollable right area-->
+  <div class="right-area" style="position: relative; left: 21%; width: 80%; height: 84vh; ">
+    <div class="right-navigation">
+        <a href="homepage.html"><i class="icon-home2 mr-2"></i> Home &nbsp; &nbsp; </a>
+        <span >Orders / <span >Finished</span> 
+    </div>
+     <!--form area [filtering]-->
+     <form method="POST" id="filter_form" >
+        <div class="form_group"><div class="form_group_title">Filter result</div>
+            <div class="allrow">
+                
+                <div class="selection-area">
+                    <label class="font-weight-bold">Education Level:</label>
+                    <select  name="educationlevel">
+                        <option value="-1">All </option>
+                        <option value="1">High School</option>
+                        <option value="2">Undergraduate</option>
+                        <option value="4">Masters</option>
+                        <option value="5">Ph.D.</option>
+                    </select>
+                </div>
+                <div class="selection-area">
+                    <label class="font-weight-bold">Category:</label>
+                    <select  name="paperdiscipline" data-fouc>
+                                  <option value="0">Art</option>
+                             
+                                  <option value="1"> English Literature</option>
+                             
+                                  <option value="2">English 101</option>
+
+                                  <option value="3">History</option>
+
+                                  <option value="4">Linguistics</option>
+
+                                  <option value="5">Philosophy</option>
+
+                                  <option value="6">Religious studies</option>
+
+                                  <option value="7">Economics</option>
+                  
+                                  <option value="8">Political science</option>
+                             
+                                  <option value="9">Psychology</option>
+
+                                  <option value="10">Sociology</option>
+                             
+                                  <option value="11">Tourism</option>
+
+                                  <option value="41">Accounting</option>
+
+                             
+                                  <option value="42">Business Studies</option>
+                             
+                                  <option value="43">Finance</option>
+
+                                  <option value="44">Human Resources Management</option>
+
+                                  <option value="45">International Relations</option>
+
+                                  <option value="46">Management</option>
+
+                             
+                                  <option value="50">Marketing</option>
+
+                                  <option value="51">Biology </option>
+                                  <option value="28">Physics</option>
+                             
+                                  <option value="52">Chemistry</option>
+
+                                  <option value="53">Geography</option>
+
+                                  <option value="54">Geology </option>
+                             
+                                  <option value="45">Zoology</option>
+
+                                  <option value="12">Computer science</option>
+                             
+                                  <option value="24">Mathematics</option>
+                             
+                                  <option value="37">Statistics</option>
+                             
+                                  <option value="70">Agriculture</option>
+                             
+                                  <option value="5">Architecture</option>
+                             
+                                  <option value="71">Aviation</option>
+                            
+                                  <option value="72">Civil Engineering</option>
+
+                                  <option value="48">law</option>
+                             
+                                  <option value="74">Engineering</option>
+                                                       
+                                  <option value="53">Health Care</option>
+                             
+                                  <option value="39">Web development</option>
+                            
+                                  <option value="77">Leadership Studies</option>
+
+                                  <option value="25">Medicine</option>
+
+                                  <option value="47">Nursing</option>
+
+                                  <option value="79">Public Administration</option>
+                             
+                                  <option value="55">Sports</option>
+                                </select>
+                </div>
+                <div class="selection-area">
+                    <label class="font-weight-bold">Time Available:</label>
+                    <select name="deadline">
+                            <option value="-1">All</option>
+                            <option value="1">Rush</option>
+                            <option value="2">0-4 days</option>
+                            <option value="3">5-9 days</option>
+                            <option value="4">More than 10 days</option>
+                    </select>
+                </div>
+                <div class="selection-area">
+                    <label class="font-weight-bold">NO. Pages:</label>
+                    <select  name="pages">
+                        <option value="-1">All </option>
+                        <option value="1">1- 3</option>
+                        <option value="2">4 - 7</option>
+                        <option value="3">8 - 11</option>
+                        <option value="5">&gt; 12</option>
+                    </select>
+                </div>
+                <div class="selection-area">
+                    <label class="font-weight-bold">Cost:</label>
+                    <select  name="cost">
+                        <option value="-1">All </option>
+                        <option value="1">$0 - $10</option>
+                        <option value="2">$11 - $40</option>
+                        <option value="3">$41 - $120</option>
+                        <option value="5">&gt; $121</option>
+                    </select>
+                </div>
+
+            </div>
+        </div>
+    </form>
+    <!--/form area [filtering]-->
+    <!--content-->
+    <div class="content_table">
+        
+		<table class="table" >
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Topic Title</th>
+                    <th>Discipline</th>
+                                                    <th>Deadline</th>				<th>Pages</th>
+                    <th>COST</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+
+            </tbody>
+        </table>
+    </div>
+    <!--/content-->
+    <!--noresult-->
+    <div class="noresultcontainer" >
+      <div><img src="../noresult.jfif" alt=""></div>
+      <div class="noresulttext" >Sorry No Result</div>
+ </div>
+ <!--noresult-->
+  </div>
+   <!--/scrollable right area-->
+</div>
+
+<!--footer-->
+<div class="footer">
+    <p>
+        &copy;  2023  PerfectWriters  developed by James Mutisya
+    </p>
+</div>
+<!--/footer-->
+<!-- Change password-->
+<div class="modal fade" id="changepassword" data-bs-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="placebid" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header bg bg-info">
+          <h6 class="modal-title" id="sendmessage">Change Password</h6>
+        </div>
+        <div class="modal-body">
+        
+            <div class="message-subject">
+              <label>Old Password:</label>
+              <input type="text" name="subject" class="form-control">
+            </div>
+            <div class="message-subject">
+                <label>New Password:</label>
+                <input type="text" name="subject" class="form-control">
+              </div>
+              <div class="message-subject">
+                <label>Cornfirm New Password:</label>
+                <input type="text" name="subject" class="form-control">
+              </div>
+            
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button"  data-dismiss="modal" class="btn  btn-outline-danger">Cancel</button>
+          <button onclick="passwordgrowl()" type="button" id="closechangepassword" data-dismiss="modal" style="display: none;" ></button>
+          <button onclick="passwordgrowl()" type="button" id="changepasswordbutton" data-dismiss="modal" class="btn btn-primary">Change Password</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/change password-->
+  <script>
+const Passsword = document.getElementById("Passsword");
+const passwordbutton = document.getElementById("passwordbutton");
+Passsword.addEventListener("click", ()=>{
+passwordbutton.click();
+
+})
+function passwordgrowl(){
+  $.bootstrapGrowl("Passsword Changed Succesfully", // Messages
+{ // options
+type: "success", // info, success, warning and danger
+ele: "body", // parent container
+offset: {
+from: "top",
+amount: 20
+},
+align: "right", // right, left or center
+width: 250,
+delay: 2000,
+allow_dismiss: true, // add a close button to the message
+stackup_spacing: 10
+});
+}
+  </script>
+</body>
+</html>
